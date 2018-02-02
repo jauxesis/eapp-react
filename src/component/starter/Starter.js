@@ -69,7 +69,7 @@ export default class Starter extends Component {
     this.props.navigation.dispatch(NavigationActions.reset({
      index:0,
      actions:[
-       NavigationActions.navigate({routeName:'home'})
+       NavigationActions.navigate({routeName:'login'})
      ]
     }));
   }

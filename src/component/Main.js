@@ -17,6 +17,7 @@ import { BackHandler } from "react-native";
 import  Home  from '../component/home/Home';
 import  Welcome  from '../component/welcome/Welcome';
 import Starter from '../component/starter/Starter';
+import  Login  from '../component/login/Login';
 
 import { Router, Route, Schema, Stack, Scene } from 'react-native-router-flux';
 
@@ -26,9 +27,12 @@ const Main = () =>(
         <Router>
           <Scene key="root">
             <Scene key="welcome" component={Welcome} title="Welcome"
-            initial={true} hideNavBar={true} />
+               hideNavBar={true} />
             <Scene key="starter" component={Starter} title="Welcome" hideNavBar={true} />
-            <Scene key="home" component={Home} title="Home"/>
+            <Scene key="home" component={Home} title="Home"
+              hideNavBar={true} />
+            <Scene key="login" component={Login} title="Login"
+             initial={true}  hideNavBar={true} />
           </Scene>
         </Router>
 )

@@ -3,16 +3,12 @@ import {
   StyleSheet,
   Text,
   View,
-  StatusBar
+  StatusBar,
+  Image
 } from 'react-native';
 import React, { Component } from 'react';
 import { Actions } from 'react-native-router-flux';
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import Images from '../../image/js/Images';
 
 export default class Home extends Component<{}> {
 
@@ -23,18 +19,13 @@ export default class Home extends Component<{}> {
   render() {
     return (
       <View style={styles.container}>
-      <StatusBar
-       backgroundColor="#182936"
-       barStyle="light-content"
-     />
+        <StatusBar
+         backgroundColor="#182936"
+         barStyle="light-content"
+       />
+        <Image  source={Images.Signinroute} />
         <Text style={styles.welcome}>
           Welcome to React Native Android It is a Test!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
         </Text>
       </View>
     );
@@ -46,7 +37,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#182936',
   },
   welcome: {
     fontSize: 20,
